@@ -17,8 +17,11 @@ public class Option {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "test_gen")
     @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1)
     private Long id;
+
     private String option;
+
     private Boolean isTrue;
-    @ManyToOne(cascade = {DETACH, REFRESH, PERSIST, MERGE}, fetch = FetchType.EAGER)
+
+    @ManyToOne(cascade = {DETACH, REFRESH, MERGE}, fetch = FetchType.EAGER)
     private Question question;
 }

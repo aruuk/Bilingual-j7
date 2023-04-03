@@ -21,12 +21,18 @@ public class Result {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "test_gen")
     @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1)
     private Long id;
+
     private String userName;
+
     private LocalDateTime dateOfSubmition;
+
     private int score;
+
     private Boolean isRead;
+
     @ManyToOne(cascade = {DETACH, REFRESH, MERGE})
     private Test test;
+
     private Status status;
 
 }

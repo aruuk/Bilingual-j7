@@ -24,24 +24,33 @@ public class Question {
     private Long id;
 
     private String questionName;
-    @ManyToOne(cascade = {DETACH, REFRESH, MERGE, PERSIST}, fetch = FetchType.EAGER)
+
+    @ManyToOne(cascade = {DETACH, REFRESH, MERGE}, fetch = FetchType.EAGER)
     private Test test;
+
+
     private LocalTime time;
+
     private String file;
+
     private int numberOfReplays;
+
     private int minNumberOfWords;
+
     private String passage;
+
     private String questionTextForPassage;
+
     private int score;
-    @OneToMany(cascade = {DETACH, REMOVE, REFRESH})
+
+    @OneToMany(cascade = ALL)
     private List<Option> options;
+
     private Status status;
+
     private QuestionType questionType;
+
     @ManyToMany(cascade = {MERGE, REFRESH, DETACH})
     private List<User> users;
 
 }
-//@JoinTable(
-//        name = "users_options_questions",
-//        joinColumns = @JoinColumn(name = "question_id"),
-//        inverseJoinColumns = @JoinColumn(name = "user_id"))

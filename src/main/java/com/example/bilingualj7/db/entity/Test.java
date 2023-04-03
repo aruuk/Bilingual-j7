@@ -24,14 +24,14 @@ public class Test {
     private String testName;
 
     @Column(length = 10000)
-    private String short_description;
+    private String shortDescription;
 
-    @OneToMany(cascade = {DETACH, REFRESH, MERGE, REMOVE}, mappedBy = "test")
+    @OneToMany(cascade = ALL, mappedBy = "test")
     private List<Question> questions;
 
     @ManyToMany(cascade = {MERGE, DETACH, REFRESH}, mappedBy = "userTests")
     private List<User> users;
 
-    @OneToOne(cascade = {DETACH, REFRESH, MERGE})
+    @OneToOne(cascade = {DETACH, REFRESH, MERGE, REMOVE})
     private Result result;
 }

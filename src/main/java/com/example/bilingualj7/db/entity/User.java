@@ -36,14 +36,14 @@ public class User implements UserDetails {
     @ManyToOne(cascade = {PERSIST, REFRESH, MERGE, DETACH})
     @JoinColumn(name = "role_id")
     private Role role;
+
     @ManyToMany(cascade = {DETACH, REFRESH, MERGE})
-    @JoinTable(name="users_tests",
-            joinColumns=
-            @JoinColumn(name="user_id", referencedColumnName="id"),
-            inverseJoinColumns=
-            @JoinColumn(name="test_id", referencedColumnName="id")
-    )
-    List <Test> userTests;
+    @JoinTable(name = "users_tests",
+            joinColumns =
+            @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns =
+            @JoinColumn(name = "test_id", referencedColumnName = "id"))
+    List<Test> userTests;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

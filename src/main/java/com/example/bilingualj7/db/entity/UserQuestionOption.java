@@ -17,10 +17,13 @@ public class UserQuestionOption {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "test_gen")
     @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1)
     private Long id;
+
     @OneToOne(cascade = {DETACH, REFRESH, MERGE})
     private User user;
-    @OneToOne()
+
+    @OneToOne(cascade = {DETACH, REFRESH, MERGE})
     private Question question;
-    @OneToOne()
+
+    @OneToOne(cascade = {DETACH, REFRESH, MERGE})
     private Option option;
 }
