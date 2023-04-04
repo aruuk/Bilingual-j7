@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 import static jakarta.persistence.CascadeType.*;
 
 @Entity
@@ -24,4 +26,7 @@ public class Option {
 
     @ManyToOne(cascade = {DETACH, REFRESH, MERGE}, fetch = FetchType.EAGER)
     private Question question;
+
+    @OneToMany(cascade = {DETACH, MERGE, REFRESH}, mappedBy = "option")
+    private List<UserQuestionOption> userQuestionOptions;
 }

@@ -28,7 +28,6 @@ public class Question {
     @ManyToOne(cascade = {DETACH, REFRESH, MERGE}, fetch = FetchType.EAGER)
     private Test test;
 
-
     private LocalTime time;
 
     private String file;
@@ -52,5 +51,9 @@ public class Question {
 
     @ManyToMany(cascade = {MERGE, REFRESH, DETACH})
     private List<User> users;
+
+    @OneToMany(cascade = {DETACH, MERGE, REFRESH}, mappedBy = "question")
+    private List<UserQuestionOption> userQuestionOptions;
+
 
 }
