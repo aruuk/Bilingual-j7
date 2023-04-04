@@ -27,6 +27,6 @@ public class Option {
     @ManyToOne(cascade = {DETACH, REFRESH, MERGE}, fetch = FetchType.EAGER)
     private Question question;
 
-    @OneToMany(cascade = {DETACH, MERGE, REFRESH}, mappedBy = "option")
+    @OneToMany(cascade = {DETACH, MERGE, REFRESH, REMOVE}, mappedBy = "option")
     private List<UserQuestionOption> userQuestionOptions;
 }

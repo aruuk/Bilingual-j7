@@ -45,7 +45,7 @@ public class User implements UserDetails {
             @JoinColumn(name = "test_id", referencedColumnName = "id"))
     private List<Test> userTests;
 
-    @OneToMany(cascade = {DETACH, MERGE, REFRESH}, mappedBy = "user")
+    @OneToMany(cascade = {DETACH, MERGE, REFRESH, REMOVE}, mappedBy = "user")
     private List<UserQuestionOption> userQuestionOptions;
 
     @Override

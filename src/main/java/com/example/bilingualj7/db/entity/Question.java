@@ -52,7 +52,7 @@ public class Question {
     @ManyToMany(cascade = {MERGE, REFRESH, DETACH})
     private List<User> users;
 
-    @OneToMany(cascade = {DETACH, MERGE, REFRESH}, mappedBy = "question")
+    @OneToMany(cascade = {DETACH, MERGE, REFRESH, REMOVE}, mappedBy = "question")
     private List<UserQuestionOption> userQuestionOptions;
 
 
