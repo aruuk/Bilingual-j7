@@ -10,10 +10,26 @@ values(1,'mahamatjan@gmail.com','Mahamatjan','Islamidinov','$2a$12$7mxRz3lS2Pw9N
       (5,'nursultan@gmail.com','Nursultan','Zhumataev', '$2a$12$AmnfBchCicOPqY9bGmd1fuvxrX.OVc3mqduZxW/1TdO.jx1sZdvee',2),
       (6,'syimyk@gmail.com','Syimyk','Bayaliev', '$2a$12$zgjrqtYQPuwtgg7HWHoXsuvBTin9erokorric1uE2X40knxmOBiTy',2);
 
-insert into questions(id,question_name,test_id,time,file,number_of_replays,min_number_of_words,passage,question_text_for_passage,score,status,question_type)
-values (1,'string',1,'18:39','string',54,78,'int','string',20,'EVALUATED','  DESCRIBE_IMAGE');
+insert into questions(id,file,min_number_of_words,number_of_replays,passage,question_name,question_text_for_passage,question_type,score,status,time,test_id)
+values (1,'string', 23, 32, 'int','task', 'string',null,23,null,'21:00',null);
 
-insert into options(id,option,is_true,question_id)
-values (2,null,false,1);
+insert into options (id, is_true,option,question_id)
+values (1,false,'string',1);
 
+insert into questions_options (question_id, options_id)
+values (1,1);
 
+insert into questions_users (question_id, users_id)
+values (1,2);
+
+insert into user_question_options (id, option_id, question_id, user_id)
+values (1,1,1,1);
+
+insert into results (id, date_of_submition, is_read, score, status, user_name, test_id)
+values (1, '2023-01-09', false, 45, null,'Mahamatjan',null);
+
+insert into tests (id, short_description, test_name, result_id)
+values (1,'string','java7',1);
+
+insert into users_tests (user_id, test_id)
+values (2,1);
