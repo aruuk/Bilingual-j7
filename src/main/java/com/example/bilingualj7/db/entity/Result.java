@@ -24,7 +24,7 @@ public class Result {
 
     private String userName;
 
-    private LocalDateTime dateOfSubmition;
+    private LocalDateTime dateOfSubmission;
 
     private int score;
 

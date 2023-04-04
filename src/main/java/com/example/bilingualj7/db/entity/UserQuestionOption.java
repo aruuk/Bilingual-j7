@@ -18,12 +18,12 @@ public class UserQuestionOption {
     @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1)
     private Long id;
 
-    @OneToOne(cascade = {DETACH, REFRESH, MERGE})
+    @ManyToOne(cascade = {DETACH, REFRESH, MERGE})
     private User user;
 
-    @OneToOne(cascade = {DETACH, REFRESH, MERGE})
+    @ManyToOne(cascade = {DETACH, REFRESH, MERGE})
     private Question question;
 
-    @OneToOne(cascade = {DETACH, REFRESH, MERGE})
+    @ManyToOne(cascade = {DETACH, REFRESH, MERGE})
     private Option option;
 }

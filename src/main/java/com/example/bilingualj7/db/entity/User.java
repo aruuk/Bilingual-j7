@@ -43,7 +43,10 @@ public class User implements UserDetails {
             @JoinColumn(name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns =
             @JoinColumn(name = "test_id", referencedColumnName = "id"))
-    List<Test> userTests;
+    private List<Test> userTests;
+
+    @OneToMany(cascade = {DETACH, MERGE, REFRESH, REMOVE}, mappedBy = "user")
+    private List<UserQuestionOption> userQuestionOptions;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
