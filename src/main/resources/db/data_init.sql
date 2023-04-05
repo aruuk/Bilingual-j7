@@ -11,10 +11,18 @@ values(1,'mahamatjan@gmail.com','Mahamatjan','Islamidinov','$2a$12$7mxRz3lS2Pw9N
       (6,'syimyk@gmail.com','Syimyk','Bayaliev', '$2a$12$zgjrqtYQPuwtgg7HWHoXsuvBTin9erokorric1uE2X40knxmOBiTy',2);
 
 insert into questions(id,file,min_number_of_words,number_of_replays,passage,question_name,question_text_for_passage,question_type,score,status,time,test_id)
-values (1,'string', 23, 32, 'int','task', 'string',null,23,null,'21:00',null);
+values (1,'string', 23, 32, 'int','task', 'string',null,23,null,'21:00',null),
+       (2, 'int',54, 67, 'double', 'int','string',null, 67, null,'22:00',null),
+       (3, 'string',46, 89, 'int', 'Hello, how is it going?','Write what are listening',null, 55, null,'22:00',null),
+       (4, 'int',34, 45, 'double', 'int','string',null, 44, null,'22:00',null),
+       (5, 'int',32, 43, 'double', 'int','string',null, 78, null,'22:00',null);
 
 insert into options (id, is_true,option,question_id)
-values (1,false,'string',1);
+values (1,false,'string',1),
+       (2,false,'int',2),
+       (3,false,'double',3),
+       (4,false,'byte', 4),
+       (5,false,'short',5);
 
 insert into questions_options (question_id, options_id)
 values (1,1);
