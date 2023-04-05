@@ -20,7 +20,7 @@ import static jakarta.persistence.CascadeType.*;
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "question_gen")
-    @SequenceGenerator(name = "question_seq", sequenceName = "question_seq", allocationSize = 1,initialValue = 6)
+    @SequenceGenerator(name = "question_seq", sequenceName = "question_seq", allocationSize = 1,initialValue = 16)
     private Long id;
 
     private String questionName;
