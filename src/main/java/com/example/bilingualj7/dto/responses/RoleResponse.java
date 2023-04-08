@@ -1,6 +1,5 @@
 package com.example.bilingualj7.dto.responses;
 
-import com.example.bilingualj7.db.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,18 +9,10 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthResponse {
+public class RoleResponse {
 
     private Long id;
 
-    private String firstname;
-
-    private String lastname;
-
-    private String email;
-
-    private RoleResponse role;
-
-    private String token;
+    private String roleName;
 
 }

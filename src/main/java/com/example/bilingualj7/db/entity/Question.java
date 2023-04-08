@@ -2,7 +2,7 @@ package com.example.bilingualj7.db.entity;
 
 import com.example.bilingualj7.db.enums.QuestionType;
 import com.example.bilingualj7.db.enums.Status;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,7 +10,7 @@ import lombok.Setter;
 import java.time.LocalTime;
 import java.util.List;
 
-import static jakarta.persistence.CascadeType.*;
+import static javax.persistence.CascadeType.*;
 
 @Entity
 @Table(name = "questions")
