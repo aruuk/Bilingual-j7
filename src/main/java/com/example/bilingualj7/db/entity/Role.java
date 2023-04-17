@@ -1,14 +1,14 @@
 package com.example.bilingualj7.db.entity;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static jakarta.persistence.CascadeType.*;
+import static javax.persistence.CascadeType.*;
 
 @Entity
 @Table(name = "roles")
@@ -25,5 +25,10 @@ public class Role {
 
     @OneToMany(cascade = {MERGE, DETACH, REFRESH}, mappedBy = "role")
     private List<User> users = new ArrayList<>();
+
+    public void addUser(User user) {
+        if (users == null) users = new ArrayList<>();
+        else users.add(user);
+    }
 }
 
