@@ -1,6 +1,5 @@
 package com.example.bilingualj7.configs.jwt;
 
-import com.example.bilingualj7.db.entity.Role;
 import io.jsonwebtoken.*;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
@@ -14,10 +13,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
-import java.util.List;
 
 @Component
 public class JwtTokenProvider {

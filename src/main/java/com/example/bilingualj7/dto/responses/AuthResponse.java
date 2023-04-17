@@ -1,6 +1,5 @@
 package com.example.bilingualj7.dto.responses;
 
-import com.example.bilingualj7.db.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
