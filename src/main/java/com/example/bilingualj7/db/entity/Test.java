@@ -17,7 +17,7 @@ import static javax.persistence.CascadeType.*;
 public class Test {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "test_gen")
-    @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1)
+    @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1, initialValue = 2)
     private Long id;
 
     @Column(length = 10000)

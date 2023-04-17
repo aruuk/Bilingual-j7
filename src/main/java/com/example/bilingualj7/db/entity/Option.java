@@ -17,7 +17,7 @@ import static javax.persistence.CascadeType.*;
 public class Option {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "test_gen")
-    @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1)
+    @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1,initialValue = 11)
     private Long id;
 
     private String option;

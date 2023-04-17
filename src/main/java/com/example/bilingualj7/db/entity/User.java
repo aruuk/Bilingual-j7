@@ -22,7 +22,7 @@ import static javax.persistence.CascadeType.*;
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "test_gen")
-    @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1)
+    @SequenceGenerator(name = "test_seq", sequenceName = "test_seq", allocationSize = 1, initialValue = 6)
     private Long id;
 
     private String firstName;
